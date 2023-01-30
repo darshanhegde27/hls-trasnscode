@@ -1,2 +1,2 @@
 # hls-trasnscode
-a backend to transode a player to hls
+a backend to transode a video to hls
