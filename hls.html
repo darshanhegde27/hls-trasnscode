@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.1.1/hls.min.js"></script>
+   
+  </head>
+  <body>
+    <h1>Hls js</h1>
+    <figure style="width:300px;height:400px">
+        <video id="player" style="width:700px;height:500px" controls></video>
+    </figure>
+    
+
+    
+    <script type="text/javascript">
+if(Hls.isSupported()) {
+   
+    var hls = new Hls();
+    hls.loadSource('http://localhost:3000/video');
+    hls.attachMedia(player);
+   
+  hls.on(Hls.Events.ERROR,function(err){
+    console.log(err)
+  })
+ }else{
+   
+ }
+  </script>
+  </body>
+</html>
